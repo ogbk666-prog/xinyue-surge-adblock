@@ -1,0 +1,8 @@
+#!name=心悦俱乐部去广告
+#!desc=过滤开屏、首页、游戏中心、玩家俱乐部和“我的”页广告；适配抓包中的 iOS 6.5.4.34
+
+[Script]
+xinyue-adblock = type=http-response,pattern=^https://bgw\.xinyue\.qq\.com/(?:xyapi\.PageService/(?:GetIndexPopFlash|IndexPage|GetGameCenterCardList|GetMyTab)|xyapi\.ShowService/GetPlayerclubDiscoverPage)(?:\?.*)?$,script-path=https://raw.githubusercontent.com/ogbk666-prog/xinyue-surge-adblock/main/xinyue-adblock.js,requires-body=true,binary-body-mode=true
+
+[MITM]
+hostname = %APPEND% bgw.xinyue.qq.com
