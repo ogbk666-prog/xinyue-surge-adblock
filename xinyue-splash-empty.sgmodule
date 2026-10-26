@@ -1,0 +1,8 @@
+#!name=心悦俱乐部去开屏（空响应测试版）
+#!desc=仅改写开屏接口为完整空响应；测试进入首页是否更快，启用前请停用其他心悦去广告模块
+
+[Script]
+xinyue-splash-empty = type=http-response,pattern=^https://bgw\.xinyue\.qq\.com/xyapi\.PageService/GetIndexPopFlash(?:\?.*)?$,script-path=https://raw.githubusercontent.com/ogbk666-prog/xinyue-surge-adblock/main/xinyue-splash-empty.js,requires-body=true,binary-body-mode=true
+
+[MITM]
+hostname = %APPEND% bgw.xinyue.qq.com
