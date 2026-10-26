@@ -1,0 +1,8 @@
+#!name=心悦俱乐部去广告（开屏排障版）
+#!desc=仅处理开屏广告，用于排查首页卡住；启用前请停用原版模块
+
+[Script]
+xinyue-splash-only = type=http-response,pattern=^https://bgw\.xinyue\.qq\.com/xyapi\.PageService/GetIndexPopFlash(?:\?.*)?$,script-path=https://raw.githubusercontent.com/ogbk666-prog/xinyue-surge-adblock/main/xinyue-adblock.js,requires-body=true,binary-body-mode=true
+
+[MITM]
+hostname = %APPEND% bgw.xinyue.qq.com
