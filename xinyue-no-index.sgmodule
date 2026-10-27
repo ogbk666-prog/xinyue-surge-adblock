@@ -1,0 +1,8 @@
+#!name=心悦俱乐部去广告（保留首页结构测试版）
+#!desc=跳过 IndexPage 首页改写，保留开屏及其他页面过滤；请先停用所有旧版心悦模块
+
+[Script]
+xinyue-no-index = type=http-response,pattern=^https://bgw\.xinyue\.qq\.com/(?:xyapi\.PageService/(?:GetIndexPopFlash|GetGameCenterCardList|GetMyTab)|xyapi\.ShowService/GetPlayerclubDiscoverPage)(?:\?.*)?$,script-path=https://raw.githubusercontent.com/ogbk666-prog/xinyue-surge-adblock/main/xinyue-adblock.js,requires-body=true,binary-body-mode=true
+
+[MITM]
+hostname = %APPEND% bgw.xinyue.qq.com
