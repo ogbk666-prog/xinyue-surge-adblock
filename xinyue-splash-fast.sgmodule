@@ -1,0 +1,8 @@
+#!name=心悦俱乐部去开屏（快速诊断版）
+#!desc=仅处理开屏广告与预载广告，不改写首页；使用 Surge JSC 引擎减小脚本启动延迟。请停用其他心悦模块后测试。
+
+[Script]
+xinyue-splash-fast = type=http-response,pattern=^https://bgw\.xinyue\.qq\.com/xyapi\.PageService/GetIndexPopFlash(?:\?.*)?$,script-path=https://raw.githubusercontent.com/ogbk666-prog/xinyue-surge-adblock/main/xinyue-splash-fast.js,requires-body=true,binary-body-mode=true,engine=jsc
+
+[MITM]
+hostname = %APPEND% bgw.xinyue.qq.com
