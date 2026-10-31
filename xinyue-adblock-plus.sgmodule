@@ -1,0 +1,12 @@
+#!name=心悦俱乐部去广告（增强版）
+#!desc=去掉心悦俱乐部 6.5.4 的开屏弹窗、首页、首页信息流、游戏中心、游戏专区、玩家俱乐部、我的、会员页、礼物中心、升级弹窗广告。覆盖 11 个接口，通用 ad 卡片递归兜底。
+#!author=ogbk666-prog
+#!tag=去广告
+#!system=ios
+#!category=去广告
+
+[Script]
+xinyue-adblock-plus = type=http-response,pattern=^https://bgw\.xinyue\.qq\.com/xyapi\.(?:PageService|ShowService)/[A-Za-z]+(?:\?.*)?$,script-path=https://raw.githubusercontent.com/ogbk666-prog/xinyue-surge-adblock/main/xinyue-adblock-plus.js,requires-body=true,binary-body-mode=true,max-size=2097152
+
+[MITM]
+hostname = %APPEND% bgw.xinyue.qq.com
